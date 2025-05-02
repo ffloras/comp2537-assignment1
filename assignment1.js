@@ -71,13 +71,6 @@ app.get("/", function (req, res) {
       document.getElementById('login').addEventListener('click', (e) => {window.location.replace('/login')});
     </script>
     `;
-
-    // `
-    // <a href='/signup'>Sign up</a>
-    // <br>
-    // <a href='/login'>Log In</a>
-    // `
-
     res.send(html);
   }
 });

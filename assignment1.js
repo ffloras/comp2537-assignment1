@@ -240,12 +240,13 @@ app.get("/logout", function (req, res) {
 
 
 app.get("*name", function (req, res) {
-  res.status(404).send("<h1>Page Not Found - 404</h1>");
+  res.status(404);
+  res.send("<h1>Page Not Found - 404</h1>");
 });
 
 
 app.listen(port, () => {
-  console.log("node application listening on port" + port);
+  console.log("node application listening on port " + port);
 });
 
 //https://comp2537-assignment1-a00982448.onrender.com

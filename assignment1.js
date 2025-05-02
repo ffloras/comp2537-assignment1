@@ -14,7 +14,7 @@ const saltRounds = 12;
 
 
 
-const expireTime = 60 * 60 * 1000; //expires in 1 day
+const expireTime = 60 * 60 * 1000; //expires in 1 hour
 
 const mongodb_host = process.env.MONGODB_HOST;
 const mongodb_user = process.env.MONGODB_USER;
@@ -234,7 +234,7 @@ app.get("/logout", function (req, res) {
       }
     })
   } else {
-    res.send('error');
+    res.redirect("/");
   }
 });
 
@@ -247,3 +247,5 @@ app.get("*name", function (req, res) {
 app.listen(port, () => {
   console.log("node application listening on port" + port);
 });
+
+//https://comp2537-assignment1-a00982448.onrender.com
